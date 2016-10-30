@@ -19,3 +19,14 @@ import "phoenix_html"
 // paths "./socket" or full ones "web/static/js/socket".
 
 // import socket from "./socket"
+import Vue from 'vue';
+import RootComponent from './root';
+
+
+//
+// Create root Vue instance
+//
+new Vue({
+    el: "#app",
+    render: h => h(RootComponent)
+});
