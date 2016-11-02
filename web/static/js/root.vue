@@ -1,5 +1,20 @@
 <template>
-    <div>Hello VueJS</div>
+    <div class="v-root">
+        <div class="header">
+            <h1>Hello Vue.JS</h1>
+            <div class="navigation">
+                <router-link to="/home">Home</router-link>
+                <router-link to="/about">About</router-link>
+            </div>
+        </div>
+        <div class="content">
+            <div class="v-router">
+                <transition name="fade" mode="out-in">
+                    <router-view></router-view>
+                </transition>
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>
