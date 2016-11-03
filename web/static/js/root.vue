@@ -9,9 +9,7 @@
         </div>
         <div class="content">
             <div class="v-router">
-                <transition name="fade" mode="out-in">
-                    <router-view></router-view>
-                </transition>
+                <router-view></router-view>
             </div>
         </div>
     </div>

@@ -13,14 +13,17 @@ defmodule PhoenixVueBoilerplate.Router do
     plug :accepts, ["json"]
   end
 
+  # Other scopes may use custom stacks.
+  scope "/api", PhoenixVueBoilerplate do
+    pipe_through :api
+
+    resources "/test", TestEndpointController
+  end
+
   scope "/", PhoenixVueBoilerplate do
     pipe_through :browser # Use the default browser stack
 
     get "/*path", PageController, :index
   end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", PhoenixVueBoilerplate do
-  #   pipe_through :api
-  # end
 end
